@@ -1,0 +1,106 @@
+{
+  "Student": {
+    "GET /students": "List all students",
+    "GET /students/{id}": "Get student by ID",
+    "POST /students": {
+      "name": "str",
+      "dob": "date",
+      "gender": "str",
+      "guardian_name": "str",
+      "contact_info": "str"
+    },
+    "PUT /students/{id}": {
+      "name": "str",
+      "dob": "date",
+      "gender": "str",
+      "guardian_name": "str",
+      "contact_info": "str"
+    },
+    "DELETE /students/{id}": "Delete student"
+  },
+  "Staff": {
+    "GET /staff": "List all staff",
+    "GET /staff/{id}": "Get staff by ID",
+    "POST /staff": {
+      "name": "str",
+      "role": "str",
+      "email": "str",
+      "phone": "str"
+    },
+    "PUT /staff/{id}": {
+      "name": "str",
+      "role": "str",
+      "email": "str",
+      "phone": "str"
+    },
+    "DELETE /staff/{id}": "Delete staff"
+  },
+  "Course": {
+    "GET /courses": "List all courses",
+    "GET /courses/{id}": "Get course by ID",
+    "POST /courses": {
+      "name": "str",
+      "description": "str",
+      "credits": "int"
+    },
+    "PUT /courses/{id}": {
+      "name": "str",
+      "description": "str",
+      "credits": "int"
+    },
+    "DELETE /courses/{id}": "Delete course"
+  },
+  "Enrollment": {
+    "GET /enrollments": "List all enrollments",
+    "POST /enrollments": {
+      "student_id": "int",
+      "course_id": "int",
+      "enroll_date": "date"
+    },
+    "DELETE /enrollments/{id}": "Delete enrollment"
+  },
+  "Attendance": {
+    "GET /attendance": "List all attendance records",
+    "POST /attendance": {
+      "student_id": "int",
+      "course_id": "int",
+      "date": "date",
+      "status": "str"
+    },
+    "PUT /attendance/{id}": {
+      "status": "str"
+    },
+    "DELETE /attendance/{id}": "Delete attendance record"
+  },
+  "FeeInvoice": {
+    "GET /invoices": "List all invoices",
+    "POST /invoices": {
+      "student_id": "int",
+      "amount": "float",
+      "due_date": "date",
+      "status": "str"
+    },
+    "PUT /invoices/{id}": {
+      "status": "str"
+    },
+    "DELETE /invoices/{id}": "Delete invoice"
+  },
+  "Payment": {
+    "GET /payments": "List all payments",
+    "POST /payments": {
+      "invoice_id": "int",
+      "amount_paid": "float",
+      "payment_date": "date",
+      "method": "str"
+    }
+  },
+  "Message": {
+    "GET /messages": "List all messages",
+    "POST /messages": {
+      "sender_id": "int",
+      "receiver_id": "int",
+      "content": "str"
+    },
+    "DELETE /messages/{id}": "Delete message"
+  }
+}
